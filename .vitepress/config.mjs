@@ -13,7 +13,7 @@ export default defineConfig({
   ignoreDeadLinks: false, //关闭忽略死链，不配置即可，非常不建议设置为true
   appearance:'dark', //启用深色模式
   head: [
-    ['link',{ rel: 'icon', href: '/my-logo.png'}],
+    ['link',{ rel: 'icon', href: '/logo.png'}],
   ],
   //markdown配置
   markdown: {
