@@ -7,5 +7,5 @@ layout: doc
 </ClientOnly>
 
 <script setup>
-import MetingMusicPlayer from '../.vitepress/theme/components/MetingMusicPlayer.vue'
+import MetingMusicPlayer from './components/MetingMusicPlayer.vue'
 </script>
