@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "canvas-confetti": "^1.9.3",
+    "medium-zoom": "^1.1.0",
+    "sass": "^1.83.0",
+    "vitepress": "^1.5.0",
+    "vitepress-plugin-music": "^0.0.9",
+    "vitepress-sidebar": "^1.30.2",
+    "vitepress-templ-preview": "^0.2.0",
+    "vue": "^3.5.13"
+  },
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@escook/vitepress-theme": "^1.3.1",
+    "@theojs/lumen": "^5.0.2",
+    "busuanzi.pure.js": "^1.0.3",
+    "nprogress-v2": "^1.0.4",
+    "vitepress-markdown-timeline": "^1.2.1",
+    "vitepress-plugin-group-icons": "^1.3.1",
+    "xgplayer": "^3.0.20"
+  }
+}
