@@ -8,7 +8,6 @@ import timeline from "vitepress-markdown-timeline";
 export default defineConfig({
   title: "XINGJI",
   description: "关注前端技术",
-  srcDir: "docs", 
   lastUpdated: true, //首次配置不会立即生效，需git提交后爬取时间戳
   ignoreDeadLinks: false, //关闭忽略死链，不配置即可，非常不建议设置为true
   appearance:'dark', //启用深色模式
