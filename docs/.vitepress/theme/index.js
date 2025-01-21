@@ -27,8 +27,8 @@ import 'nprogress-v2/dist/index.css' // 进度条样式
 
 import FriendsLinks from './components/FriendsLinks.vue' // 友链组件
 
-import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import { useData, useRoute } from 'vitepress'; // 评论组件
+import giscusTalk from 'vitepress-plugin-comment-with-giscus'
+import { useData, useRoute } from 'vitepress' // 评论组件
 
 
 const playlist = [
