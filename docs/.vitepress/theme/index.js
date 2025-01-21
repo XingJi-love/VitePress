@@ -27,8 +27,6 @@ import 'nprogress-v2/dist/index.css' // 进度条样式
 
 import FriendsLinks from './components/FriendsLinks.vue' // 友链组件
 
-import GiscusComment from './components/GiscusComment.vue' // 评论组件
-
 
 const playlist = [
   {
@@ -98,14 +96,12 @@ const playlist = [
 export default {
   extends: DefaultTheme,
 
-Layout: () => { // 返回顶部和评论
-  return h(DefaultTheme.Layout, null, {
-    // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
-    'doc-after': () => h(GiscusComment), // 在文档之后添加评论组件
-  })
-},
-
+  Layout: () => { // 返回顶部
+    return h(DefaultTheme.Layout, null, {
+      // https://vitepress.dev/guide/extending-default-theme#layout-slots
+      'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
+    })
+  },
 
   setup() { // 图片放大功能初始化
     const route = useRoute();
