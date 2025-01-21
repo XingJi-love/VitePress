@@ -122,21 +122,26 @@ export default {
     );
 
     // giscus配置
+    // Obtain configuration from: https://giscus.app/
     giscusTalk({
-      repo: 'XingJi-love/VitePress', //仓库
-      repoId: 'R_kgDONs90Yg', //仓库ID
-      category: 'Announcements', // 讨论分类
-      categoryId: 'DIC_kwDONs90Ys4CmMcK', //讨论分类ID
-      mapping: 'pathname',
-      inputPosition: 'bottom',
-      lang: 'zh-CN',
-      }, 
-      {
-        frontmatter, route
+        repo: 'XingJi-love/VitePress', //仓库
+        repoId: 'R_kgDONs90Yg', //仓库ID
+        category: 'Announcements', // 讨论分类
+        categoryId: 'DIC_kwDONs90Ys4CmMcK', //讨论分类ID
+        mapping: 'pathname', // default: `pathname`
+        inputPosition: 'top', // default: `top`
+        lang: 'en', // default: `zh-CN`
+        lightTheme: 'light', // default: `light`
+        darkTheme: 'transparent_dark', // default: `transparent_dark`
+        // ...
+    },
+    {
+      frontmatter, route
       },
-      //默认值为true，表示已启用，此参数可以忽略；
-      //如果为false，则表示未启用
-      //您可以使用“comment:true”序言在页面上单独启用它
+      // Whether to activate the comment area on all pages.
+      // The default is true, which means enabled, this parameter can be ignored;
+      // If it is false, it means it is not enabled.
+      // You can use `comment: true` preface to enable it separately on the page.
       true
     );
   },
@@ -159,6 +164,7 @@ export default {
     app.component('Links', DocLinks)
     app.component('BoxCube', DocBoxCube)
     app.component('FriendsLinks', FriendsLinks) // 注册友链组件
+    DefaultTheme.enhanceApp(ctx)
     vitepressMusic(playlist) // 注册音乐播放器组件
     if (inBrowser) {
       NProgress.configure({ showSpinner: false })
