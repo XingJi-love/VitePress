@@ -27,6 +27,9 @@ import 'nprogress-v2/dist/index.css' // 进度条样式
 
 import FriendsLinks from './components/FriendsLinks.vue' // 友链组件
 
+import giscusTalk from 'vitepress-plugin-comment-with-giscus';
+import { useData, useRoute } from 'vitepress'; // 评论组件
+
 
 const playlist = [
   {
@@ -104,6 +107,7 @@ export default {
   },
 
   setup() { // 图片放大功能初始化
+    const { frontmatter } = useData();
     const route = useRoute();
     const initZoom = () => {
       // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认
@@ -115,6 +119,25 @@ export default {
     watch(
       () => route.path,
       () => nextTick(() => initZoom())
+    );
+
+    // giscus配置
+    giscusTalk({
+      repo: 'XingJi-love/VitePress', //仓库
+      repoId: 'R_kgDONs90Yg', //仓库ID
+      category: 'Announcements', // 讨论分类
+      categoryId: 'DIC_kwDONs90Ys4CmMcK', //讨论分类ID
+      mapping: 'pathname',
+      inputPosition: 'bottom',
+      lang: 'zh-CN',
+      }, 
+      {
+        frontmatter, route
+      },
+      //默认值为true，表示已启用，此参数可以忽略；
+      //如果为false，则表示未启用
+      //您可以使用“comment:true”序言在页面上单独启用它
+      true
     );
   },
   /*

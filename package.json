@@ -4,6 +4,7 @@
     "medium-zoom": "^1.1.0",
     "sass": "^1.83.0",
     "vitepress": "^1.5.0",
+    "vitepress-plugin-comment-with-giscus": "^1.1.15",
     "vitepress-plugin-music": "^0.0.9",
     "vitepress-sidebar": "^1.30.2",
     "vitepress-templ-preview": "^0.2.0",
