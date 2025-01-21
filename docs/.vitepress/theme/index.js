@@ -164,7 +164,6 @@ export default {
     app.component('Links', DocLinks)
     app.component('BoxCube', DocBoxCube)
     app.component('FriendsLinks', FriendsLinks) // 注册友链组件
-    DefaultTheme.enhanceApp(ctx)
     vitepressMusic(playlist) // 注册音乐播放器组件
     if (inBrowser) {
       NProgress.configure({ showSpinner: false })
