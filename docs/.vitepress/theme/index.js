@@ -98,18 +98,14 @@ const playlist = [
 export default {
   extends: DefaultTheme,
 
-  Layout: () => { // 返回顶部
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
-    })
-  },
+Layout: () => { // 返回顶部和评论
+  return h(DefaultTheme.Layout, null, {
+    // https://vitepress.dev/guide/extending-default-theme#layout-slots
+    'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽
+    'doc-after': () => h(GiscusComment), // 在文档之后添加评论组件
+  })
+},
 
-  Layout() {
-        return h(Theme.Layout, null, {
-            'doc-after': () => h(GiscusComment),
-        });
-  },
 
   setup() { // 图片放大功能初始化
     const route = useRoute();
